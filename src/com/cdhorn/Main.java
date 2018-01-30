@@ -33,11 +33,6 @@ public class Main {
 
         }
 
-//    }
-
-
-
-
 /*
 Write some code in any programming language for the following situation: A User has the following properties: Email Address, First Name, Last Name, Registration Date. It also has a Save method. Admin users are exactly like regular Users, but can only be saved when the email address ends with “@fool.com”
  */
