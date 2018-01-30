@@ -12,24 +12,30 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter your email address: ");
         String emailAddress = scanner.next();
-        if (emailAddress.contains("@fool.com")) {
-            System.out.println("What's your first name?");
-            String firstName = scanner.next();
-            System.out.println("What's your last name?");
-            String lastName = scanner.next();
 
-            Date date = new Date();
-            DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
-            String registrationDate = df.format(date);
-            User.addUser(emailAddress, firstName, lastName, registrationDate);
+        HelperFx helperFx = new HelperFx();
 
-        } else {
-            System.out.println("Sorry, that's not a fool's email!");
+            while (!emailAddress.contains("@fool.com")) {
+                System.out.println("Sorry that email is not an admin domain.");
+                emailAddress = helperFx.checkEmailAddress();
+            }
+                System.out.println("What's your first name?");
+                String firstName = scanner.next();
+                System.out.println("What's your last name?");
+                String lastName = scanner.next();
+
+                Date date = new Date();
+                DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+                String registrationDate = df.format(date);
+                User.addUser(emailAddress, firstName, lastName, registrationDate);
+
+            }
+
         }
 
-    }
+//    }
 
-}
+
 
 
 /*
